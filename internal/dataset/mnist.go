@@ -10,10 +10,12 @@ const (
 	TRAIN_DATA_FILENAME   = "train-images-idx3-ubyte.gz"
 	TRAIN_LABELS_FILENAME = "train-labels-idx1-ubyte.gz"
 	TRAIN_DATA_SIZE       = 60000
-	TEST_DATA_FILENAME    = "t10k-images-idx3-ubyte.gz"
-	TEST_LABELS_FILENAME  = "t10k-labels-idx1-ubyte.gz"
-	TEST_DATA_SIZE        = 10000
-	IMAGE_SHAPE           = 28
+
+	TEST_DATA_FILENAME   = "t10k-images-idx3-ubyte.gz"
+	TEST_LABELS_FILENAME = "t10k-labels-idx1-ubyte.gz"
+	TEST_DATA_SIZE       = 10000
+
+	IMAGE_SHAPE = 28
 )
 
 type (
