@@ -10,11 +10,7 @@ import (
 )
 
 const (
-	BASE_URL              = "https://storage.googleapis.com/cvdf-datasets/mnist"
-	TRAIN_DATA_FILENAME   = "train-images-idx3-ubyte.gz"
-	TRAIN_LABELS_FILENAME = "train-labels-idx1-ubyte.gz"
-	TEST_DATA_FILENAME    = "t10k-images-idx3-ubyte.gz"
-	TEST_LABELS_FILENAME  = "t10k-labels-idx1-ubyte.gz"
+	BASE_URL = "https://storage.googleapis.com/cvdf-datasets/mnist"
 )
 
 func downloadDataset(path string) (*Dataset, error) {
