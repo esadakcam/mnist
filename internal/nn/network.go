@@ -112,26 +112,30 @@ func sigmoid(v []float64) []float64 {
 	return output
 }
 
-func softmax(xs []float64) []float64 {
-	maxVal := xs[0]
-	for _, x := range xs {
-		if x > maxVal {
-			maxVal = x
+func softmax(v []float64) []float64 {
+	if len(v) == 0 {
+		return nil
+	}
+
+	maxVal := v[0]
+	for _, v := range v {
+		if v > maxVal {
+			maxVal = v
 		}
 	}
 
-	exps := make([]float64, len(xs))
-	sum := 0.0
+	expVals := make([]float64, len(v))
+	var sum float64
 
-	for i, x := range xs {
-		exps[i] = math.Exp(x - maxVal)
-		sum += exps[i]
+	for i, v := range v {
+		expVal := math.Exp(v - maxVal)
+		expVals[i] = expVal
+		sum += expVal
 	}
 
-	result := make([]float64, len(xs))
-	for i, v := range exps {
-		result[i] = v / sum
+	for i := range expVals {
+		expVals[i] /= sum
 	}
 
-	return result
+	return expVals
 }

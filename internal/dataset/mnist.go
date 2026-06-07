@@ -113,7 +113,7 @@ func ImageToArray(i *Image) []float64 {
 	index := 0
 	for _, row := range i {
 		for _, col := range row {
-			output[index] = float64(col) / 255
+			output[index] = float64(col) / 255.0
 			index++
 		}
 	}
