@@ -107,3 +107,15 @@ func PrintImage(image Image, label Label) {
 		fmt.Println()
 	}
 }
+
+func ImageToArray(i *Image) []float64 {
+	output := make([]float64, IMAGE_SHAPE*IMAGE_SHAPE)
+	index := 0
+	for _, row := range i {
+		for _, col := range row {
+			output[index] = float64(col) / 255
+			index++
+		}
+	}
+	return output
+}
