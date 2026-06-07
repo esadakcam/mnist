@@ -14,7 +14,7 @@ go run ./cmd -load weights.json -epochs=0 -print-random
 Example output:
 
 ```bash
-go run ./cmd -load weights.json -epochs=0 -print-random
+$ go run ./cmd -load weights.json -epochs=0 -print-random
 
 
              .++#++
