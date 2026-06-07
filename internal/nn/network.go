@@ -49,10 +49,13 @@ func (n *Network) ForwardPropagation(input []float64) ([OUTPUT_SIZE]float64, err
 	return [OUTPUT_SIZE]float64(y_hat), nil
 }
 
-func randomFloat32() float64 {
-	min := -float64(math.MaxFloat64)
-	max := float64(math.MaxFloat64)
-	return min + rand.Float64()*(max-min)
+func randomFloat64() float64 {
+	v := rand.Float64() * math.MaxFloat64
+	if rand.Intn(2) == 0 {
+		return -v / 10000
+	}
+
+	return v / 10000
 }
 
 func initMatrix(rows int, cols int) [][]float64 {
@@ -60,7 +63,7 @@ func initMatrix(rows int, cols int) [][]float64 {
 	for i := range rows {
 		w[i] = make([]float64, cols)
 		for j := range cols {
-			w[i][j] = randomFloat32()
+			w[i][j] = randomFloat64()
 		}
 	}
 	return w
@@ -69,7 +72,7 @@ func initMatrix(rows int, cols int) [][]float64 {
 func initVector(size int) []float64 {
 	b := make([]float64, size)
 	for i := range size {
-		b[i] = randomFloat32()
+		b[i] = randomFloat64()
 	}
 	return b
 }

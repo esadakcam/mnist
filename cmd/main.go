@@ -16,7 +16,7 @@ func main() {
 	// dataset.PrintImage(ds.TrainData[31], ds.TrainLabel[31])
 	network := nn.New()
 	input := dataset.ImageToArray(&ds.TrainData[0])
-	fmt.Println(input)
+	// fmt.Println(input)
 	output, err := network.ForwardPropagation(input)
 	if err != nil {
 		fmt.Println("error: ", err)
