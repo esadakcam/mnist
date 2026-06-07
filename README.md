@@ -10,3 +10,37 @@ To load and test randomly:
 ```bash
 go run ./cmd -load weights.json -epochs=0 -print-random
 ```
+
+Example output:
+
+```bash
+go run ./cmd -load weights.json -epochs=0 -print-random
+
+
+             .++#++
+           +########+
+         .####.   +##.
+         ###.    .###.
+        ###.     .####.
+        ##+       +###+
+        ##+        +##+
+       .###.      +##+
+        ####+...+###+
+         ###########.
+        .####++.++###+
+       .###+       +##+
+       +##.         ###
+      .###.         ###.
+      .###.         ##+
+      .###.        .##+
+       +##+      .+###.
+        ###+   .+###+.
+         +########+
+          .####+.
+
+
+
+
+prediction: 8
+test accuracy: 94.44%
+```

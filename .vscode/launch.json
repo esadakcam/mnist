@@ -7,10 +7,6 @@
       "request": "launch",
       "mode": "debug",
       "program": "${workspaceFolder}/cmd/main.go"
-      // "args": ["--config", "dev.yaml"],
-      // "env": {
-      //   "APP_ENV": "dev"
-      // }
     }
   ]
 }
